@@ -13,7 +13,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '.env'
+      ignoreEnvFile: process.env.NODE_ENV === 'production'
     }),
     TypeOrmModule.forRootAsync({
       useFactory: () => getDatabaseConfig()

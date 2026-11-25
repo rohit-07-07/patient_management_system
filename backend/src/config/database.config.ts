@@ -5,9 +5,10 @@ import { Bill } from '../billing/entities/bill.entity';
 import { Payment } from '../payments/entities/payment.entity';
 
 export const getDatabaseConfig = (): TypeOrmModuleOptions => {
-  const dbType = process.env.DB_TYPE || 'postgres';
+  const isProd = process.env.NODE_ENV === 'production';
+  const dbType = process.env.DB_TYPE || (isProd ? 'sqlite' : 'postgres');
 
-  if (dbType === 'sqlite') {
+  if (dbType === 'sqlite' || !process.env.DB_HOST) {
     return {
       type: 'sqlite',
       database: 'database.sqlite',
