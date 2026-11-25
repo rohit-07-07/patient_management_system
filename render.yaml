@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: patient-management-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: DB_TYPE
+        value: sqlite
+      - key: JWT_SECRET
+        value: supersecretjwtkey_healthcare_secure_2025
+      - key: RAZORPAY_KEY_ID
+        value: rzp_test_1DP5mmOlF5G5ag
+      - key: RAZORPAY_KEY_SECRET
+        value: s9x3W5f1U9r1hQ3zV9w8x7y6
