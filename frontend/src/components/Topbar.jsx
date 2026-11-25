@@ -9,7 +9,7 @@ export default function Topbar({ title }) {
       <div className="topbar-title">{title}</div>
       <div className="topbar-right">
         <span style={{ fontSize: '13px', color: 'var(--text-subtle)' }}>
-          Session Active: <strong>{user?.name || 'Administrator'}</strong>
+          Session Active: <strong>{user?.name || 'Dr. Rajesh Sharma'}</strong>
         </span>
       </div>
     </header>

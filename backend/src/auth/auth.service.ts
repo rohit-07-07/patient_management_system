@@ -16,15 +16,20 @@ export class AuthService {
   ) {}
 
   async onModuleInit() {
-    const count = await this.userRepository.count();
-    if (count === 0) {
+    const adminUser = await this.userRepository.findOne({
+      where: { email: 'admin@hospital.com' }
+    });
+    if (!adminUser) {
       const hashedPassword = await bcrypt.hash('admin123', 10);
       const defaultUser = this.userRepository.create({
-        name: 'Dr. Sarah Connor',
+        name: 'Dr. Rajesh Sharma',
         email: 'admin@hospital.com',
         password: hashedPassword
       });
       await this.userRepository.save(defaultUser);
+    } else if (adminUser.name === 'Dr. Sarah Connor') {
+      adminUser.name = 'Dr. Rajesh Sharma';
+      await this.userRepository.save(adminUser);
     }
   }
 

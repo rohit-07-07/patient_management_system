@@ -80,7 +80,7 @@ export default function BillingPage() {
         key: orderData.keyId,
         amount: orderData.amount,
         currency: orderData.currency || 'INR',
-        name: 'CarePulse Medical Hospital',
+        name: 'CarePulse Hospital & Health Institute, Bengaluru',
         description: orderData.billDescription,
         order_id: orderData.orderId,
         prefill: {
@@ -168,7 +168,7 @@ export default function BillingPage() {
           <button className="btn btn-primary" onClick={handleOpenAdd}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <line x1="12" y1="5" x2="12" y2="19" />
-              <line x1="5" y1="12" x2="19" y2="12" />
+              <line x1="5" y1="12" x2="12" y2="12" />
             </svg>
             Create New Bill
           </button>

@@ -64,7 +64,7 @@ export default function Sidebar() {
 
       <div className="sidebar-footer">
         <div className="user-badge">
-          <span className="user-name">{user?.name || 'Practitioner'}</span>
+          <span className="user-name">{user?.name || 'Dr. Rajesh Sharma'}</span>
           <span className="user-role">{user?.email || 'admin@hospital.com'}</span>
         </div>
         <button onClick={handleLogout} className="logout-btn" title="Sign out">

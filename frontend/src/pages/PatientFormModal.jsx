@@ -109,7 +109,7 @@ export default function PatientFormModal({ isOpen, onClose, patientToEdit }) {
             id="patient-name"
             name="name"
             className="form-control"
-            placeholder="e.g. Johnathan Doe"
+            placeholder="e.g. Aarav Sharma"
             value={formData.name}
             onChange={handleChange}
             disabled={actionLoading}
@@ -166,7 +166,7 @@ export default function PatientFormModal({ isOpen, onClose, patientToEdit }) {
               id="patient-phone"
               name="phone"
               className="form-control"
-              placeholder="+1-555-0199"
+              placeholder="+91 98765 43210"
               value={formData.phone}
               onChange={handleChange}
               disabled={actionLoading}
@@ -201,7 +201,7 @@ export default function PatientFormModal({ isOpen, onClose, patientToEdit }) {
             name="address"
             rows="3"
             className="form-control"
-            placeholder="Street address, City, State"
+            placeholder="Flat / Street, City, State (e.g. Indiranagar, Bengaluru)"
             value={formData.address}
             onChange={handleChange}
             disabled={actionLoading}

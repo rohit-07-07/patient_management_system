@@ -13,37 +13,65 @@ export class PatientsService {
   ) {}
 
   async onModuleInit() {
-    const count = await this.patientRepository.count();
-    if (count === 0) {
+    const existingPatients = await this.patientRepository.find();
+    if (existingPatients.length === 0) {
       const initialPatients = [
         {
-          name: 'Eleanor Vance',
+          name: 'Ananya Iyer',
           age: 34,
           gender: 'Female',
-          phone: '+1-555-0143',
-          email: 'eleanor.vance@example.com',
-          address: '42 Elmcrest Road, Boston, MA'
+          phone: '+91 98450 12345',
+          email: 'ananya.iyer@example.com',
+          address: 'Flat 302, Palm Meadows, Whitefield, Bengaluru'
         },
         {
-          name: 'Marcus Brody',
+          name: 'Vikramaditya Patil',
           age: 52,
           gender: 'Male',
-          phone: '+1-555-0189',
-          email: 'marcus.brody@example.com',
-          address: '108 Oakridge Boulevard, Seattle, WA'
+          phone: '+91 98220 54321',
+          email: 'vikram.patil@example.com',
+          address: '12 Shivaji Nagar, Pune, Maharashtra'
         },
         {
-          name: 'Avery Chen',
+          name: 'Rahul Deshmukh',
           age: 28,
-          gender: 'Other',
-          phone: '+1-555-0122',
-          email: 'avery.chen@example.com',
-          address: '77 Pinefield Avenue, Austin, TX'
+          gender: 'Male',
+          phone: '+91 99112 87654',
+          email: 'rahul.deshmukh@example.com',
+          address: '78 Jubilee Hills, Hyderabad, Telangana'
+        },
+        {
+          name: 'Pooja Verma',
+          age: 41,
+          gender: 'Female',
+          phone: '+91 98101 23456',
+          email: 'pooja.verma@example.com',
+          address: 'B-14 Sector 62, Noida, Uttar Pradesh'
         }
       ];
       for (const p of initialPatients) {
         const item = this.patientRepository.create(p);
         await this.patientRepository.save(item);
+      }
+    } else {
+      for (const p of existingPatients) {
+        if (p.name === 'Eleanor Vance') {
+          p.name = 'Ananya Iyer';
+          p.phone = '+91 98450 12345';
+          p.address = 'Flat 302, Palm Meadows, Whitefield, Bengaluru';
+          await this.patientRepository.save(p);
+        } else if (p.name === 'Marcus Brody') {
+          p.name = 'Vikramaditya Patil';
+          p.phone = '+91 98220 54321';
+          p.address = '12 Shivaji Nagar, Pune, Maharashtra';
+          await this.patientRepository.save(p);
+        } else if (p.name === 'Avery Chen') {
+          p.name = 'Rahul Deshmukh';
+          p.gender = 'Male';
+          p.phone = '+91 99112 87654';
+          p.address = '78 Jubilee Hills, Hyderabad, Telangana';
+          await this.patientRepository.save(p);
+        }
       }
     }
   }

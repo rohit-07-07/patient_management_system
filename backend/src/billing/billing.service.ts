@@ -23,9 +23,9 @@ export class BillingService {
         const sampleBill = this.billRepository.create({
           patientId: patient.id,
           description: 'Comprehensive Health Screening & Diagnostic Blood Work',
-          amount: 250.00,
-          tax: 25.00,
-          totalAmount: 275.00,
+          amount: 2500.00,
+          tax: 450.00,
+          totalAmount: 2950.00,
           paymentStatus: 'Pending'
         });
         await this.billRepository.save(sampleBill);
