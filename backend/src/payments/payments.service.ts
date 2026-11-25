@@ -2,11 +2,12 @@ import { Injectable, NotFoundException, BadRequestException, InternalServerError
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, DataSource } from 'typeorm';
 import * as crypto from 'crypto';
-import * as Razorpay from 'razorpay';
 import { Payment } from './entities/payment.entity';
 import { Bill } from '../billing/entities/bill.entity';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { VerifyPaymentDto } from './dto/verify-payment.dto';
+
+const Razorpay = require('razorpay');
 
 @Injectable()
 export class PaymentsService {
