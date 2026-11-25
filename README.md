@@ -1,5 +1,10 @@
 # CarePulse - Patient Management System
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=for-the-badge&logo=vercel)](https://patient-management-system-sable-mu.vercel.app)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/rohit-07-07/patient_management_system)
+
+🌐 **Live Application URL:** [https://patient-management-system-sable-mu.vercel.app](https://patient-management-system-sable-mu.vercel.app)
+
 Full-stack clinical and patient billing management application built with **React**, **Redux Toolkit**, **NestJS**, **PostgreSQL**, and **Razorpay Payment Gateway**.
 
 ---
