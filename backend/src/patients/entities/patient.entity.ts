@@ -27,9 +27,9 @@ export class Patient {
   @OneToMany(() => Bill, (bill) => bill.patient, { cascade: true })
   bills: Bill[];
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn()
   createdAt: Date;
 
-  @UpdateDateColumn({ type: 'timestamp' })
+  @UpdateDateColumn()
   updatedAt: Date;
 }

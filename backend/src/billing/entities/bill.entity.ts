@@ -32,9 +32,9 @@ export class Bill {
   @OneToMany(() => Payment, (payment) => payment.bill, { cascade: true })
   payments: Payment[];
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn()
   createdAt: Date;
 
-  @UpdateDateColumn({ type: 'timestamp' })
+  @UpdateDateColumn()
   updatedAt: Date;
 }

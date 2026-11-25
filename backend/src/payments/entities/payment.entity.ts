@@ -28,9 +28,9 @@ export class Payment {
   @Column({ type: 'varchar', length: 30, default: 'Pending' })
   paymentStatus: string;
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn()
   createdAt: Date;
 
-  @UpdateDateColumn({ type: 'timestamp' })
+  @UpdateDateColumn()
   updatedAt: Date;
 }
