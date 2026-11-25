@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
 import { Bill } from '../../billing/entities/bill.entity';
 
 @Entity('patients')
@@ -24,7 +24,7 @@ export class Patient {
   @Column({ type: 'text' })
   address: string;
 
-  @OneMany(() => Bill, (bill) => bill.patient, { cascade: true })
+  @OneToMany(() => Bill, (bill) => bill.patient, { cascade: true })
   bills: Bill[];
 
   @CreateDateColumn({ type: 'timestamp' })
