@@ -1,9 +1,11 @@
 # CarePulse - Patient Management System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=for-the-badge&logo=vercel)](https://patient-management-system-sable-mu.vercel.app)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/rohit-07-07/patient_management_system)
+[![Live Frontend](https://img.shields.io/badge/Live%20Frontend-Vercel-success?style=for-the-badge&logo=vercel)](https://patient-management-system-sable-mu.vercel.app)
+[![Live Backend API](https://img.shields.io/badge/Live%20API-Render-blue?style=for-the-badge&logo=render)](https://patient-management-api-i8jz.onrender.com/api)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/rohit-07-07/patient_management_system)
 
-🌐 **Live Application URL:** [https://patient-management-system-sable-mu.vercel.app](https://patient-management-system-sable-mu.vercel.app)
+- 🌐 **Live Frontend Application:** [https://patient-management-system-sable-mu.vercel.app](https://patient-management-system-sable-mu.vercel.app)
+- 🚀 **Live Backend REST API:** [https://patient-management-api-i8jz.onrender.com/api](https://patient-management-api-i8jz.onrender.com/api)
 
 Full-stack clinical and patient billing management application built with **React**, **Redux Toolkit**, **NestJS**, **PostgreSQL**, and **Razorpay Payment Gateway**.
 
@@ -25,7 +27,7 @@ REST API (Axios with Bearer Interceptors)
       ▼
 NestJS (Controllers -> Guards -> Services -> TypeORM)
       │
-      ├── PostgreSQL (Users, Patients, Bills, Payments)
+      ├── PostgreSQL / SQLite (Users, Patients, Bills, Payments)
       └── Razorpay Payment Gateway (Order creation & HMAC Signature Verification)
 ```
 
